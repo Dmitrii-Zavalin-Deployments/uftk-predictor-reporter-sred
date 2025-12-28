@@ -1,6 +1,6 @@
-# 📄 .github/workflows/uftk-predictor-reporter-sred.yml
+# 📄 .github/workflows/uftk_predictor_reporter_sred.yml
 
-name: uftk-predictor-reporter-sred.yml
+name: uftk_predictor_reporter_sred.yml
 
 on:
   push:
@@ -46,7 +46,7 @@ jobs:
             git push || echo "No changes to push"
           )
   
-  uftk-predictor-reporter-sred:
+  uftk_predictor_reporter_sred:
     needs: code_quality_check
     runs-on: ubuntu-latest
     env:
