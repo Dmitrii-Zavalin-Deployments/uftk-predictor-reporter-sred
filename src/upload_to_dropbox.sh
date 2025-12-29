@@ -3,7 +3,7 @@
 APP_KEY="${APP_KEY}"
 APP_SECRET="${APP_SECRET}"
 REFRESH_TOKEN="${REFRESH_TOKEN}"
-DROPBOX_UPLOAD_FOLDER="/UniversalFieldToolkit"
+DROPBOX_UPLOAD_FOLDER="/UniversalFieldToolkit/05_schema_input"
 
 LOCAL_OUTPUT_DIR="$GITHUB_WORKSPACE/data/testing-input-output"
 
