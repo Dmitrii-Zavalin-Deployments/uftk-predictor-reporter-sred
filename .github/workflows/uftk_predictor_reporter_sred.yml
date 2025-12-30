@@ -109,16 +109,15 @@ jobs:
           GIT_USER_NAME: ${{ secrets.GIT_USER_NAME }}
           GIT_USER_EMAIL: ${{ secrets.GIT_USER_EMAIL }}
         run: |
-          echo "$(date '+%Y-%m-%d %H:%M:%S'): Predictor‑Reporter triggered by '${{ github.actor }}' via '${{ github.event_name }}'" >> trigger.txt
+          echo "$(date '+%Y-%m-%d %H:%M:%S'): Analyzer triggered by '${{ github.actor }}' via '${{ github.event_name }}'" >> trigger.txt
 
           git config --global user.name "${GIT_USER_NAME}"
           git config --global user.email "${GIT_USER_EMAIL}"
 
           git add trigger.txt
-          git commit -m "Log Predictor‑Reporter trigger by ${{ github.actor }} via ${{ github.event_name }}" || echo "No new log or errors to commit"
+          git commit -m "Log Analyzer trigger by ${{ github.actor }} via ${{ github.event_name }}" || echo "No new log or errors to commit"
 
-          git pull --rebase origin main || echo "⚠️ Rebase failed — check for conflicts"
+          # Removed rebase step — it caused failures
           git push origin main || echo "❌ Push failed — remote may have diverged"
-
 
 
