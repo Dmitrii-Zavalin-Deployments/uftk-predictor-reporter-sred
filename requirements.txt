@@ -4,6 +4,7 @@ vulture>=2.9
 dropbox
 pandas
 matplotlib>=3.7
+scikit-learn>=1.3
 
 
 
